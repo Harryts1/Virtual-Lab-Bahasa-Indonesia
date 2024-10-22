@@ -126,6 +126,16 @@ footer {
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0.125rem 0.25rem;
 }
 
 .chapter-btn:hover, .chapter-btn.active {
@@ -240,9 +250,6 @@ footer {
   .chapter-selector {
     flex-direction: column;
   }
-  .chapter-btn {
-    width: 100%;
-  }
   nav ul {
     flex-direction: column;
   }
@@ -296,8 +303,9 @@ footer {
     flex-wrap: wrap;
   }
   .chapter-btn {
-    flex: 1 1 auto;
-    margin: 0.25rem;
+    padding: 0.5rem 1rem; 
+    font-size: 0.9rem; 
+    margin-right: 0.5rem;
   }
   #tes {
     width: auto;
