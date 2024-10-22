@@ -45,7 +45,11 @@
         <div class="word-item" data-correct="tidakBaku">subyek</div>
     </div>
 
-    <button class="check-button" onclick="checkAnswers()">Periksa Jawaban</button>
+    <div class="button-container">
+        <button onclick="checkAnswers()" class="check-button">Periksa Jawaban</button>
+        <button onclick="resetGame()" class="reset-button">Reset</button>
+    </div>
+    
     <div class="score" id="score"></div>
 
     <script src="testskill.js"></script>
