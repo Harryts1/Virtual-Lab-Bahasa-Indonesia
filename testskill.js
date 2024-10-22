@@ -1,38 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const containers = document.querySelectorAll('.word-list, .source-words');
-    
-    containers.forEach(container => {
-        new Sortable(container, {
-            group: 'shared',
-            animation: 150,
-            ghostClass: 'dragging',
-            onStart: function(evt) {
-                evt.item.classList.add('dragging');
-            },
-            onEnd: function(evt) {
-                evt.item.classList.remove('dragging');
-            },
-            onChange: function(evt) {
-                updateContainerStyles();
-            }
-        });
-    });
-
-    document.querySelectorAll('.word-list').forEach(container => {
-        container.addEventListener('dragenter', function() {
-            this.classList.add('dragover');
-        });
-
-        container.addEventListener('dragleave', function() {
-            this.classList.remove('dragover');
-        });
-
-        container.addEventListener('drop', function() {
-            this.classList.remove('dragover');
-        });
-    });
-});
-
 function updateContainerStyles() {
     document.querySelectorAll('.word-list').forEach(container => {
         if (container.children.length > 0) {
@@ -43,13 +8,67 @@ function updateContainerStyles() {
     });
 }
 
+let isGameLocked = false;
+
+function resetGame() {
+    isGameLocked = false;
+
+    const scoreElement = document.getElementById('score');
+    scoreElement.textContent = '';
+
+    document.querySelectorAll('.word-item').forEach(item => {
+        item.style.backgroundColor = '';
+        item.style.color = '';
+        item.classList.remove('locked');
+    });
+
+    const sourceWords = document.getElementById('sourceWords');
+    document.querySelectorAll('.word-item').forEach(item => {
+        sourceWords.appendChild(item);
+    });
+
+    updateContainerStyles();
+    
+    const checkButton = document.querySelector('.check-button');
+    checkButton.disabled = false;
+    checkButton.style.opacity = '1';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const containers = document.querySelectorAll('.word-list, .source-words');
+    
+    containers.forEach(container => {
+        new Sortable(container, {
+            group: 'shared',
+            animation: 150,
+            ghostClass: 'dragging',
+            onStart: function(evt) {
+                if (isGameLocked) {
+                    evt.preventDefault();
+                    return false;
+                }
+                evt.item.classList.add('dragging');
+            },
+            onEnd: function(evt) {
+                evt.item.classList.remove('dragging');
+            },
+            onChange: function(evt) {
+                updateContainerStyles();
+            }
+        });
+    });
+});
+
 function checkAnswers() {
+    if (isGameLocked) return;
+    
     const bakuContainer = document.getElementById('baku');
     const tidakBakuContainer = document.getElementById('tidakBaku');
     let correct = 0;
     let total = 0;
 
     document.querySelectorAll('.word-item').forEach(item => {
+        item.classList.add('locked');
         item.style.backgroundColor = '';
     });
 
@@ -86,11 +105,9 @@ function checkAnswers() {
         scoreElement.style.opacity = '1';
     }, 200);
 
+    isGameLocked = true;
+
     const checkButton = document.querySelector('.check-button');
     checkButton.disabled = true;
     checkButton.style.opacity = '0.7';
-    setTimeout(() => {
-        checkButton.disabled = false;
-        checkButton.style.opacity = '1';
-    }, 1500);
 }
