@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Skill - Virtual Lab Bahasa Indonesia</title>
+    <link rel="stylesheet" href="testskill.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="back-arrow">&#8592;</a>
+        <h1>Test Skill Bahasa Indonesia</h1>
+        <p>Drag dan drop kata-kata ke kotak yang sesuai</p>
+    </div>
+
+    <div class="container">
+        <div class="word-container">
+            <div class="title">Kata Baku</div>
+            <div class="word-list" id="baku"></div>
+        </div>
+
+        <div class="word-container">
+            <div class="title">Kata Tidak Baku</div>
+            <div class="word-list" id="tidakBaku"></div>
+        </div>
+    </div>
+
+    <div class="source-words" id="sourceWords">
+        <div class="word-item" data-correct="baku">apabila</div>
+        <div class="word-item" data-correct="tidakBaku">kalo</div>
+        <div class="word-item" data-correct="baku">praktik</div>
+        <div class="word-item" data-correct="tidakBaku">praktek</div>
+        <div class="word-item" data-correct="baku">hierarki</div>
+        <div class="word-item" data-correct="tidakBaku">hirarki</div>
+        <div class="word-item" data-correct="baku">kata</div>
+        <div class="word-item" data-correct="tidakBaku">kate</div>
+        <div class="word-item" data-correct="baku">risiko</div>
+        <div class="word-item" data-correct="tidakBaku">resiko</div>
+        <div class="word-item" data-correct="baku">sistem</div>
+        <div class="word-item" data-correct="tidakBaku">sistim</div>
+        <div class="word-item" data-correct="baku">standar</div>
+        <div class="word-item" data-correct="tidakBaku">standart</div>
+        <div class="word-item" data-correct="baku">subjek</div>
+        <div class="word-item" data-correct="tidakBaku">subyek</div>
+    </div>
+
+    <button class="check-button" onclick="checkAnswers()">Periksa Jawaban</button>
+    <div class="score" id="score"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Lab Bahasa Indonesia - Videos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <header>
+            <h1>Virtual Lab Bahasa Indonesia</h1>
+        </header>
+        <div id="menu-icon" class="menu-icon">☰</div>
+        <ul id="menu-list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="practice.html">Practice</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" id="logout-btn" style="color: red;">Logout</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Daftar Video Pembelajaran</h2>
+        <p id="spasi">Berikut adalah beberapa video yang dapat membantu Anda mempelajari lebih lanjut tentang Bahasa Indonesia:</p>
+
+        <!-- Bab 1 Playlist -->
+        <section class="playlist">
+            <h3>Bab 1: Pengantar TTKi</h3>
+            <img src="img/Pengantar.png" alt="Bab 1 Thumbnail" class="thumbnail" onclick="togglePlaylist('playlist-bab1')">
+            
+            <div id="playlist-bab1" class="video-list" style="display: none;">
+                <iframe id="videoPlayer1" width="640" height="360" src="https://www.youtube.com/embed/vtPkouMKp2I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls></iframe> <br> 
+                <ul>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/vtPkouMKp2I', 'videoPlayer1')" class="chapter-btn" id="spasi2">Video 1: Pengantar Perkuliahan TTKI</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/rDo2-cnGoL0', 'videoPlayer1')" class="chapter-btn" id="spasi2">Video 2: Pengantar Materi Kebahasaan</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/FZXn-XqaZGk', 'videoPlayer1')" class="chapter-btn" id="spasi2">Video 3: Pengantar Materi Penulisan Karya Ilmiah</button></li>
+
+                </ul>
+            </div>
+        </section>
+
+        <!-- Bab 2 Playlist -->
+        <section class="playlist">
+            <h3>Bab 2: Pengenalan Tata Tulis Karya Ilmiah</h3>
+            <img src="img/Ejaan.png" alt="Bab 2 Thumbnail" class="thumbnail" onclick="togglePlaylist('playlist-bab2')">
+
+            <div id="playlist-bab2" class="video-list" style="display: none;">
+                <iframe id="videoPlayer2" width="640" height="360" src="https://www.youtube.com/embed/aKjOcklsxL8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls></iframe> <br> 
+                <ul>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/aKjOcklsxL8', 'videoPlayer2')" class="chapter-btn" id="spasi2">Video 1: Pengantar Ejaan Bahasa Indonesia</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/iBD-zpM4nak', 'videoPlayer2')" class="chapter-btn" id="spasi2">Video 2: Penulisan Huruf Kapital, Huruf Miring, Huruf Tebal</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/hjpT8gP_4js', 'videoPlayer2')" class="chapter-btn" id="spasi2">Video 3: Pemakaian Huruf Kapital</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/TBBBm8a62mE', 'videoPlayer2')" class="chapter-btn" id="spasi2">Video 4: Huruf Miring dan Huruf Tebal</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/Oi8xSvDCZ7w', 'videoPlayer2')" class="chapter-btn" id="spasi2">Video 5: Penulisan Imbuhan, Kata Depan, Partikel Per, dan Pun</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/jdLuv8clJiQ', 'videoPlayer2')" class="chapter-btn" id="spasi2">Video 6: Penulisan Kata</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/hjpT8gP_4js', 'videoPlayer2')" class="chapter-btn" id="spasi2">Video 7: Penulisan Kata Majemuk, Kata Ulang, Angka, dan Bilangan</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/bgA5EgM-B9U', 'videoPlayer2')" class="chapter-btn" id="spasi2">Video 8: Penulisan Unsur Serapan</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/Ljr42qNJ0-8', 'videoPlayer2')" class="chapter-btn" id="spasi2">Video 9: Tanda Baca</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/3BubG7sRsRs', 'videoPlayer2')" class="chapter-btn" id="spasi2">Video 10: Tanda Baca</button></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Bab 3 Playlist -->
+        <section class="playlist">
+            <h3>Bab 3: Tata Kata</h3>
+            <img src="img/TataKata.png" alt="Bab 3 Thumbnail" class="thumbnail" onclick="togglePlaylist('playlist-bab3')">
+            
+            <div id="playlist-bab3" class="video-list" style="display: none;">
+                <iframe id="videoPlayer3" width="640" height="360" src="https://www.youtube.com/embed/UCQ5pJoWznQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls></iframe> <br> 
+                <ul>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/UCQ5pJoWznQ', 'videoPlayer3')" class="chapter-btn" id="spasi2">Video 1: Pengantar Tata Kata</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/GMY2Gp6uOBM', 'videoPlayer3')" class="chapter-btn" id="spasi2">Video 2: Kaidah Pembentukan Kata</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/2Rbsl7LWhZU', 'videoPlayer3')" class="chapter-btn" id="spasi2">Video 3: Kaidah Pemakaian Bentukan Kata Dalam Kalimat</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/CLKdmfFtlAY', 'videoPlayer3')" class="chapter-btn" id="spasi2">Video 4: Kata yang Sering Salah Penggunaannya</button></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Bab 4 Playlist -->
+        <section class="playlist">
+            <h3>Bab 4: Tata Kalimat</h3>
+            <img src="img/TataKalimat.png" alt="Bab 4 Thumbnail" class="thumbnail" onclick="togglePlaylist('playlist-bab4')">
+            
+            <div id="playlist-bab4" class="video-list" style="display: none;">
+                <iframe id="videoPlayer4" width="640" height="360" src="https://www.youtube.com/embed/2RR6m5RFKf0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls></iframe> <br> 
+                <ul>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/2RR6m5RFKf0', 'videoPlayer4')" class="chapter-btn" id="spasi2">Video 1: Pengantar Tata Kalimat</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/vof0n1e3qDU', 'videoPlayer4')" class="chapter-btn" id="spasi2">Video 2: Kalimar Ragam Ilmiah</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/evW3BopOw7k', 'videoPlayer4')" class="chapter-btn" id="spasi2">Video 3: Kalimat Taksa</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/Ty6dfHKCCBg', 'videoPlayer4')" class="chapter-btn" id="spasi2">Video 4: Kalimat Mubazir</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/DY75Um_sD14', 'videoPlayer4')" class="chapter-btn" id="spasi2">Video 5: Kalimat Nirlogis</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/8VWFkKqNGcA', 'videoPlayer4')" class="chapter-btn" id="spasi2">Video 6: Kalimat Nirlengkap</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/UkHiqZxhSoY', 'videoPlayer4')" class="chapter-btn" id="spasi2">Video 7: Kalimat Tidak Sejajar</button></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Bab 5 Playlist -->
+        <section class="playlist">
+            <h3>Bab 5: Paragraf</h3>
+            <img src="img/Paragraf.png" alt="Bab 5 Thumbnail" class="thumbnail" onclick="togglePlaylist('playlist-bab5')">
+            
+            <div id="playlist-bab5" class="video-list" style="display: none;">
+                <iframe id="videoPlayer5" width="640" height="360" src="https://www.youtube.com/embed/38PmUC6VMkM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls></iframe> <br> 
+                <ul>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/38PmUC6VMkM', 'videoPlayer5')" class="chapter-btn" id="spasi2">Video 1: Pengantar Materi Paragraf</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/-b2RgcP7zts', 'videoPlayer5')" class="chapter-btn" id="spasi2">Video 2: Paragraf Berdasarkan Pola Pikir</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/URCrn71q9Ng', 'videoPlayer5')" class="chapter-btn" id="spasi2">Video 3: Paragraf Berdasarkan Pola Urutan</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/54bJF8sZSbc', 'videoPlayer5')" class="chapter-btn" id="spasi2">Video 4: Paragraf Berdasarkan Pola Pengembangan</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/SPhRq5msUFs', 'videoPlayer5')" class="chapter-btn" id="spasi2">Video 5: Paragraf Berdasarkan Gaya/Ekspresi Pengungkapan</button></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Bab 6 Playlist -->
+        <section class="playlist">
+            <h3>Bab 6: Karya Tulis Ilmiah I</h3>
+            <img src="img/KTI.png" alt="Bab 6 Thumbnail" class="thumbnail" onclick="togglePlaylist('playlist-bab6')">
+                    
+            <div id="playlist-bab6" class="video-list" style="display: none;">
+                <iframe id="videoPlayer6" width="640" height="360" src="https://www.youtube.com/embed/agvtdJ-k8aI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls></iframe> <br> 
+                <ul>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/agvtdJ-k8aI', 'videoPlayer6')" class="chapter-btn" id="spasi2">Video 1: Definisi dan Ciri Karya Tulis Ilmiah</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/LiVblsdBhcI', 'videoPlayer6')" class="chapter-btn" id="spasi2">Video 2: Karya Tulis Ilmiah yang Baik</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/4VN2DbVT4Ao', 'videoPlayer6')" class="chapter-btn" id="spasi2">Video 3: Tahap Penulisan Karya Tulis Ilmiah</button></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Bab 7 Playlist -->
+        <section class="playlist">
+            <h3>Bab 7: Karya Tulis Ilmiah II</h3>
+            <img src="img/KTI2.png" alt="Bab 7 Thumbnail" class="thumbnail" onclick="togglePlaylist('playlist-bab7')">
+            
+            <div id="playlist-bab7" class="video-list" style="display: none;">
+                <iframe id="videoPlayer7" width="640" height="360" src="https://www.youtube.com/embed/Pxxqx5qQfms" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls></iframe> <br> 
+                <ul>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/Pxxqx5qQfms', 'videoPlayer7')" class="chapter-btn" id="spasi2">Video 1: Topik, Tema Judul</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/_25GVr59HOg', 'videoPlayer7')" class="chapter-btn" id="spasi2">Video 2: Strategi Menetapkan Tema Riset Berkualitas</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/5hcleKYEhYo', 'videoPlayer7')" class="chapter-btn" id="spasi2">Video 3: Kerangka Karangan</button></li>
+                    <li><button onclick="changeVideo('https://www.youtube.com/embed/brojTczcHdI', 'videoPlayer7')" class="chapter-btn" id="spasi2">Video 4: Kerangka Karangan Topik</button></li>
+                </ul>
+            </div>
+        </section>        
+
+        <br>
+        <a href="practice.html" class="chapter-btn" id="tes">Coba Latihan</a>
+    </main>
+
+    <footer>
+        © 2024 Harry Truman Suhalim - 18222081.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

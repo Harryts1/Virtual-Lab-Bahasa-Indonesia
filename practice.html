@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Lab Bahasa Indonesia - Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <header>
+            <h1>Virtual Lab Bahasa Indonesia</h1>
+        </header>
+        <div id="menu-icon" class="menu-icon">☰</div>
+        <ul id="menu-list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="practice.html">Practice</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" id="logout-btn" style="color: red;">Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="practice-container">
+        <h1>Latihan Bahasa Indonesia</h1>
+        <br>
+        <div id="progress-bar" class="progress-bar">
+            <div id="progress" class="progress"></div>
+        </div>
+
+        <div id="chapter-selector" class="chapter-selector">
+            <button class="chapter-btn" data-chapter="bab2">Bab 2: Ejaan</button>
+            <button class="chapter-btn" data-chapter="bab3">Bab 3: Tata Kata</button>
+            <button class="chapter-btn" data-chapter="bab4">Bab 4: Tata Kalimat</button>
+            <button class="chapter-btn" data-chapter="bab5">Bab 5: Paragraf</button>
+            <button class="chapter-btn" data-chapter="bab6">Bab 6: Karya Tulis Ilmiah I </button>
+            <button class="chapter-btn" data-chapter="bab7">Bab 7: Karya Tulis Ilmiah II</button>
+        </div>
+
+        <div id="quiz-container" class="quiz-container">
+        </div>
+
+        <div id="controls-container" class="controls-container">
+            <button id="hint-btn" class="hint-btn">Petunjuk</button>
+            <button id="submit-quiz" class="submit-btn">Periksa</button>
+            <button id="next-question" class="next-btn" style="display: none;">Lanjut</button>
+        </div>
+        
+        <br>
+        <div id="hint-text" class="hint-text" style="display: none;"></div>
+        <br>
+        <div id="quiz-result" class="result"></div>
+    </main>
+
+    <footer>
+        © 2024 Harry Truman Suhalim - 18222081.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
